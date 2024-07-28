@@ -178,9 +178,9 @@
 
 use libc::c_int;
 
-#[cfg_attr(not(target_os = "linux"), allow(dead_code))]
+#[cfg(target_os = "linux")]
 mod glibc_compat;
-#[cfg_attr(not(target_os = "macos"), allow(dead_code))]
+#[cfg(target_os = "macos")]
 mod macos_compat;
 #[cfg(target_os = "linux")]
 use glibc_compat as struct_defs;
