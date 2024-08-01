@@ -1,3 +1,5 @@
+use std::{fs::File, io::Write, path::PathBuf};
+
 fn main() {
     if std::env::var("CARGO_FEATURE_TEST_C_INTEGRATION")
         .ok()
