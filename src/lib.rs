@@ -182,6 +182,8 @@ use libc::c_int;
 mod glibc_compat;
 #[cfg(target_os = "macos")]
 mod macos_compat;
+#[cfg(target_arch = "riscv64")]
+mod riscv64;
 #[cfg(target_os = "linux")]
 use glibc_compat as struct_defs;
 #[cfg(target_os = "macos")]
